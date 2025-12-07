@@ -70,8 +70,71 @@ section h3 {
   color: #0066cc;
 }
 
-.activity-card p {
-  margin-bottom: 8px;
+/* Participants section styles */
+.participants-section {
+  margin-top: 12px;
+  padding-top: 10px;
+  border-top: 1px dashed #eee;
+}
+
+.participants-section h5 {
+  margin: 0 0 8px 0;
+  font-size: 14px;
+  color: #1a237e;
+}
+
+/* Use a clean list look, with a limited height and scroll when many participants */
+.participants-list {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  max-height: 120px;
+  overflow-y: auto;
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+}
+
+/* Each participant row */
+.participant-item {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  padding: 6px 8px;
+  border-radius: 6px;
+  background: linear-gradient(90deg, #ffffff, #fbfbff);
+  border: 1px solid #f0f0f5;
+  font-size: 14px;
+  color: #333;
+}
+
+/* Small circular avatar with initial */
+.avatar {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 28px;
+  height: 28px;
+  border-radius: 50%;
+  background-color: #1a237e;
+  color: #fff;
+  font-weight: 600;
+  font-size: 13px;
+  flex: 0 0 28px;
+}
+
+/* Participant name/email */
+.participant-name {
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+
+/* Fallback when no participants */
+.no-participants {
+  font-style: italic;
+  color: #666;
+  padding: 6px 8px;
 }
 
 .form-group {
